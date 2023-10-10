@@ -1,0 +1,41 @@
+.menuItem {
+    display: grid;
+    grid-template-columns: 85% 15%;
+    &:first-child {
+        grid-template-columns: 100%;
+    }
+}
+
+.link {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background: transparent;
+    padding: 25px 20px;
+    color: black;
+    gap: 10px;
+    transition: 0.4s;
+    font-size: 18px;
+    font-weight: 500;
+    justify-content: space-between;
+    height: 60px;
+
+    &:hover {
+        transition: 0.4s;
+        background-color: #c0f1db;
+        button {
+            display: block;
+        }
+    }
+}
+
+.activeLink {
+    @extend .link;
+    background-color: #4bc08b;
+    color: white;
+
+    &:hover {
+        transition: 0.4s;
+        background-color: #1ba557;
+    }
+}
