@@ -1,5 +1,4 @@
 import Switch from "@components/Switch/Switch";
-import { useState } from "react";
 import style from "./Header.module.scss";
 
 interface HeaderProps {
