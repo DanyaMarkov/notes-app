@@ -5,7 +5,7 @@
     border-radius: 0 0 4px 4px;
     min-height: 180px;
     border-top: 3px solid rgb(60, 56, 56);
-
+    color: black;
     -webkit-box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
     -moz-box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
     box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
@@ -14,9 +14,11 @@
         font-size: 20px;
         font-weight: 600;
         text-align: center;
+        word-wrap: break-word;
     }
 
     .text {
         font-size: 14px;
+        word-wrap: break-word;
     }
 }

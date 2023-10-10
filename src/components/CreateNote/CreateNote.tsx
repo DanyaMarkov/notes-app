@@ -13,10 +13,8 @@ const CreateNote = ({ createNewNote, notes }: CreateNoteProps) => {
     const [noteText, setNoteText] = useState<string>("");
     const [noteColor, setNoteColor] = useState<string>("#f6c36c");
 
-    // const [error, setError] = useState<string>("");
-
     const createNewNoteFunc = (newNoteItem: NoteType) => {
-        const titles = notes.map((el) => el.title);
+        const titles = notes.map((el) => el.title.trim());
 
         if (newNoteItem.title.trim() === "") {
             alert("Заполните название заметки");
@@ -26,6 +24,8 @@ const CreateNote = ({ createNewNote, notes }: CreateNoteProps) => {
             alert("Запись с таким названием уже есть!");
             return;
         }
+        setNoteTitle("");
+        setNoteText("");
         createNewNote(newNoteItem);
     };
 

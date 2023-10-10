@@ -8,7 +8,6 @@
     width: 100%;
     display: flex;
     flex-direction: column;
-    background-color: #fff;
 }
 
 .addCategory {
@@ -19,7 +18,6 @@
     text-align: center;
     width: 100%;
     padding: 25px 20px;
-    color: black;
     gap: 10px;
     transition: 0.4s;
     font-size: 18px;
@@ -37,4 +35,5 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
+    color: black;
 }

@@ -1,6 +1,6 @@
 import CreateNote from "@components/CreateNote/CreateNote";
 import Search from "@components/Search/Search";
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import style from "./NotesPage.module.scss";
 import { NoteType } from "@global/types";
 import Note from "@components/Note/Note";
@@ -64,6 +64,10 @@ const NotesPage = () => {
         });
     }, [param, categories]);
 
+    const filteredNotes: NoteType[] = useMemo(() => {
+        return notes.filter((el) => el.title.toLowerCase().includes(searchValue.toLowerCase().trim()));
+    }, [notes, searchValue, categories]);
+
     return (
         <div className={style.page}>
             <div className={style.header}>
@@ -72,7 +76,7 @@ const NotesPage = () => {
             </div>
 
             <div className={style.list}>
-                {notes?.map((note) => {
+                {filteredNotes?.map((note) => {
                     return <Note note={note} />;
                 })}
             </div>

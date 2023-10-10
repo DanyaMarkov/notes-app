@@ -12,7 +12,6 @@
     align-items: center;
     background: transparent;
     padding: 25px 20px;
-    color: black;
     gap: 10px;
     transition: 0.4s;
     font-size: 18px;
@@ -32,7 +31,7 @@
 .activeLink {
     @extend .link;
     background-color: #4bc08b;
-    color: white;
+    color: white !important;
 
     &:hover {
         transition: 0.4s;
