@@ -1,10 +1,15 @@
 .menuItem {
     display: grid;
-    grid-template-columns: 85% 15%;
-    &:first-child {
-        grid-template-columns: 100%;
-    }
 }
+
+//     grid-template-columns: 100%;
+
+//     // display: grid;
+//     // grid-template-columns: 85% 15%;
+//     // &:first-child {
+//     //     grid-template-columns: 100%;
+//     // }
+// }
 
 .link {
     display: flex;

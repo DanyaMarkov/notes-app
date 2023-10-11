@@ -7,9 +7,6 @@ interface HeaderProps {
 }
 
 const Header = ({ theme, setTheme }: HeaderProps) => {
-    // const userName = localStorage.getItem("userName") || "User Test";
-    // const [currentMode, setCurrentMode] = useState<"day" | "night">("day");
-
     return (
         <header className={style.header}>
             <div className={style.title}>Notes App</div>

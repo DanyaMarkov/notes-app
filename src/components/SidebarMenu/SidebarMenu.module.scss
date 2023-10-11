@@ -1,13 +1,25 @@
 .menu {
-    height: 100px;
+    // height: 100px;
     display: flex;
     flex-direction: column;
+
+    position: fixed;
+    top: 100px;
+    z-index: 4;
+
+    // max-height: calc(100vh - 150px);
 }
 
 .menuList {
     width: 100%;
     display: flex;
     flex-direction: column;
+    max-height: calc(100vh - 100px - 60px - 94px);
+    overflow-y: auto;
+}
+.menuList > div {
+    display: grid;
+    grid-template-columns: 85% 15%;
 }
 
 .addCategory {
@@ -36,4 +48,9 @@
     flex-direction: column;
     gap: 20px;
     color: black;
+
+    input {
+        background-color: rgb(237, 237, 237);
+        padding: 6px;
+    }
 }

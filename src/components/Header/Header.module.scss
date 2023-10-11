@@ -4,6 +4,12 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+
+    // background-color: rgba(248, 244, 244, 0.85);
+
+    position: sticky;
+    top: 0px;
+    z-index: 4;
 }
 
 .title {

@@ -12,14 +12,14 @@
 }
 
 .app > header {
-grid-area: header;
+  grid-area: header;
 }
 
 .app > nav {
-grid-area: menu;
+  grid-area: menu;
 }
 
 .app > main {
-grid-area: content;
-padding-left: 30px;
+  grid-area: content;
+  padding-left: 30px;
 }

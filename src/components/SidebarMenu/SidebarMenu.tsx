@@ -32,6 +32,10 @@ const SidebarMenu = () => {
             alert("Такая категория уже существует!");
             return;
         }
+        if (categoryTitle.trim() === "") {
+            alert("Нельзя задать пустое название категории!");
+            return;
+        }
         const newCategory = {
             id: uuid(),
             title: categoryTitle,
@@ -70,26 +74,28 @@ const SidebarMenu = () => {
 
     return (
         <nav className={style.menu}>
+            <MenuLink title="Домашняя страница" path="" />
+
             <div className={style.menuList}>
-                <MenuLink title="Домашняя страница" path="" />
+                {categories.map((category) => {
+                    if (
+                        validateIsCategory(localStorage.getItem(category)) &&
+                        typeof localStorage.getItem(category) === "string"
+                    ) {
+                        const categ = JSON.parse(localStorage.getItem(category) || "");
+                        return (
+                            <MenuLink
+                                key={categ.id}
+                                title={categ.title}
+                                path={categ.id}
+                                removeCategory={() => removeCategory(category)}
+                            />
+                        );
+                    }
+                    return null;
+                })}
             </div>
-            {categories.map((category) => {
-                if (
-                    validateIsCategory(localStorage.getItem(category)) &&
-                    typeof localStorage.getItem(category) === "string"
-                ) {
-                    const categ = JSON.parse(localStorage.getItem(category) || "");
-                    return (
-                        <MenuLink
-                            key={categ.id}
-                            title={categ.title}
-                            path={categ.id}
-                            removeCategory={() => removeCategory(category)}
-                        />
-                    );
-                }
-                return null;
-            })}
+
             <div className={style.addCategory} onClick={openModal}>
                 + Новая категория
             </div>
@@ -104,8 +110,12 @@ const SidebarMenu = () => {
                 contentStyle={{ background: "#fff" }}
             >
                 <div className={style.popup}>
-                    <h1>Создание категории</h1>
-                    <input value={newCategoryTitle} onChange={(e) => setNewCategoryTitle(e.target.value)} />
+                    <h1>Укажите название новой категории</h1>
+                    <input
+                        value={newCategoryTitle}
+                        placeholder="название категории"
+                        onChange={(e) => setNewCategoryTitle(e.target.value)}
+                    />
                     <CustomButton onClick={() => createCategory(newCategoryTitle.trim())}> Создать </CustomButton>
                 </div>
             </Popup>

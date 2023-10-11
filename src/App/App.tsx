@@ -14,7 +14,7 @@ const App = () => {
 
     const links = document.getElementsByTagName("a");
     for (let i = 0; i < links.length; i++) {
-        links[i].style.color = theme === "day" ? "#22272e" : "#f8f4f4"; // Здесь можно задать нужный цвет
+        links[i].style.color = theme === "day" ? "#000" : "#f8f4f4"; // Здесь можно задать нужный цвет
     }
 
     return (
