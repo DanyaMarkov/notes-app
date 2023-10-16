@@ -17,6 +17,23 @@
         word-wrap: break-word;
     }
 
+    .remove {
+        position: relative;
+        top: -35px;
+        right: -299px;
+        color: #fff;
+        font-weight: 500;
+        background-color: rgb(197, 7, 7);
+        width: 20px;
+        height: 20px;
+        text-align: center;
+
+        &:hover {
+            cursor: pointer;
+            filter: brightness(1.15);
+        }
+    }
+
     .text {
         font-size: 14px;
         word-wrap: break-word;

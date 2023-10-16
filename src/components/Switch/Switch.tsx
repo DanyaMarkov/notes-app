@@ -9,8 +9,10 @@ const Switch: React.FC<ISwitchProps> = ({ currentMode, setCurrentMode }) => {
     const changeCurrentMode = (): void => {
         if (currentMode === "day") {
             setCurrentMode("night");
+            sessionStorage.setItem("theme", "night");
             return;
         }
+        sessionStorage.setItem("theme", "day");
         setCurrentMode("day");
     };
 

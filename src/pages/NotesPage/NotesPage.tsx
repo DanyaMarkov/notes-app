@@ -68,6 +68,11 @@ const NotesPage = () => {
         return notes.filter((el) => el.title.toLowerCase().includes(searchValue.toLowerCase().trim()));
     }, [notes, searchValue, categories]);
 
+    const removeNote = (noteTitle: string) => {
+        const updatedNotes = notes.filter((noteElement) => noteElement.title !== noteTitle);
+        setNotes(updatedNotes);
+    };
+
     return (
         <div className={style.page}>
             <div className={style.header}>
@@ -77,7 +82,7 @@ const NotesPage = () => {
 
             <div className={style.list}>
                 {filteredNotes?.map((note) => {
-                    return <Note note={note} />;
+                    return <Note note={note} removeNote={removeNote} />;
                 })}
             </div>
         </div>

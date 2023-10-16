@@ -1,13 +1,10 @@
 .menu {
-    // height: 100px;
     display: flex;
     flex-direction: column;
 
     position: fixed;
     top: 100px;
     z-index: 4;
-
-    // max-height: calc(100vh - 150px);
 }
 
 .menuList {
