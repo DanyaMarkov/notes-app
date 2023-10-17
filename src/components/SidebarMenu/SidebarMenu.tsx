@@ -75,6 +75,7 @@ const SidebarMenu = () => {
     return (
         <nav className={style.menu}>
             <MenuLink title="Домашняя страница" path="" />
+            <MenuLink title="О нас" path="/about" />
 
             <div className={style.menuList}>
                 {categories.map((category) => {

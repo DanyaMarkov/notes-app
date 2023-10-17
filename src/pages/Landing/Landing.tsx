@@ -5,17 +5,12 @@ const Landing = () => {
         <div className={style.landing}>
             <h1>Приложение для создания заметок</h1>
             <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto unde provident recusandae, tenetur
-                nostrum reiciendis ab possimus dolorum veniam quidem aspernatur cumque consequuntur, molestiae tempora.
-                Quidem odio inventore rerum nihil.
-            </p>
-            <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laborum, illo ipsam assumenda, cum illum
-                perferendis ipsum aut excepturi, quis minus quo optio repudiandae. Consequatur qui tempore sit possimus,
-                blanditiis excepturi porro culpa cum temporibus mollitia perferendis assumenda debitis tenetur, est
-                obcaecati quae, eos fuga ullam ipsa sed. Ex incidunt perspiciatis eos explicabo quisquam temporibus et,
-                officia esse sequi, molestiae reprehenderit. Corrupti porro tempore numquam magni voluptate laudantium
-                ea mollitia vitae, enim quaerat? Vitae dignissimos, tenetur facere commodi culpa repellendus magnam!
+                Веб-приложение представляет собой инструмент для создания заметок, которые состоят из названия и текста.
+                Каждая заметка может быть отнесена к определенной категории, которая имеет собственное название.
+                Пользователь может создавать новые категории и сохранять заметки внутри них. Это помогает упорядочить и
+                организовать информацию по темам. Все заметки сохраняются в приложении и могут быть удалены за
+                ненадобностью. Это веб-приложение обеспечивает удобный и простой способ управления персональными
+                заметками, облегчая организацию и доступ к важной информации.
             </p>
         </div>
     );

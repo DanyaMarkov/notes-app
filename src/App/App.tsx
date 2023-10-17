@@ -1,5 +1,6 @@
 import Header from "@components/Header/Header";
 import SidebarMenu from "@components/SidebarMenu/SidebarMenu";
+import About from "@pages/About/About";
 import Landing from "@pages/Landing/Landing";
 import NotesPage from "@pages/NotesPage/NotesPage";
 import { useEffect, useState } from "react";
@@ -18,16 +19,18 @@ const App = () => {
             for (let i = 0; i < links.length; i++) {
                 links[i].style.color = theme === "day" ? "#22272e" : "#f8f4f4";
             }
-        }, 0);
-    }, [theme]);
+        }, 10);
+    }, [theme, localStorage.length]);
 
     return (
         <div className="app">
             <Header theme={theme} setTheme={setTheme} />
             <SidebarMenu />
+
             <main>
                 <Routes>
                     <Route path="/" element={<Landing />} />
+                    <Route path="/about" element={<About />} />
                     <Route path="/:noteId" element={<NotesPage />} />
                 </Routes>
             </main>
